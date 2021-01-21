@@ -1,0 +1,12 @@
+{
+  "name": "trace",
+  "displayName": "trace",
+  "expo": {
+    "name": "trace",
+    "slug": "trace",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
