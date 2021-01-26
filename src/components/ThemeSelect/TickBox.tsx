@@ -1,8 +1,8 @@
-import React from "react"
-import {View} from "react-native"
-import {Feather} from "@expo/vector-icons"
+import React from 'react'
+import {View} from 'react-native'
+import {Feather} from '@expo/vector-icons'
 
-import {useTheme} from "../../hooks"
+import {useTheme} from '../../hooks'
 
 interface Props {
   isActive: boolean
@@ -10,7 +10,7 @@ interface Props {
 
 export default function TickBox({isActive}: Props) {
   const {colors} = useTheme()
-  const name = isActive ? "check-circle" : "circle"
+  const name = isActive ? 'check-circle' : 'circle'
   const color = isActive ? colors.secondaryAccent : colors.primaryGray
   return (
     <View>

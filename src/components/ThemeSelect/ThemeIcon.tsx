@@ -1,7 +1,7 @@
-import React from "react"
-import {View, StyleSheet} from "react-native"
+import React from 'react'
+import {View, StyleSheet} from 'react-native'
 
-import {DARK_THEME, LIGHT_THEME} from "../../theme"
+import {DARK_THEME, LIGHT_THEME} from '../../theme'
 
 interface Props {
   isDark: boolean
@@ -12,13 +12,22 @@ export default function ThemeIcon({isDark}: Props) {
   return (
     <View style={[{backgroundColor: theme.background}, styles.container]}>
       <View style={[{backgroundColor: theme.primaryGray}, styles.pill]} />
-      <View style={[{backgroundColor: theme.secondaryBackground}, styles.tile]} />
+      <View
+        style={[{backgroundColor: theme.secondaryBackground}, styles.tile]}
+      />
       <View style={styles.row}>
         {Array.from({length: 3}).map((_, i) => {
-          return <View key={i} style={[{backgroundColor: theme.secondaryGray}, styles.smallPill]} />
+          return (
+            <View
+              key={i}
+              style={[{backgroundColor: theme.secondaryGray}, styles.smallPill]}
+            />
+          )
         })}
       </View>
-      <View style={[{backgroundColor: theme.secondaryBackground}, styles.tile]} />
+      <View
+        style={[{backgroundColor: theme.secondaryBackground}, styles.tile]}
+      />
     </View>
   )
 }
@@ -29,7 +38,7 @@ const styles = StyleSheet.create({
     width: 44,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: 'white',
     paddingTop: 8,
     paddingHorizontal: 4
   },
@@ -40,11 +49,11 @@ const styles = StyleSheet.create({
   },
   row: {
     marginTop: 4,
-    flexDirection: "row"
+    flexDirection: 'row'
   },
   tile: {
     height: 20,
-    width: "100%",
+    width: '100%',
     borderRadius: 4,
     marginTop: 4
   },

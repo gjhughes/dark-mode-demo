@@ -1,8 +1,8 @@
-import React from "react"
-import {View, StyleSheet} from "react-native"
+import React from 'react'
+import {View, StyleSheet} from 'react-native'
 
-import {ThemeSelect} from "../components"
-import {SettingsStackProps} from "../navigation/types"
+import {ThemeSelect} from '../components'
+import {SettingsStackProps} from '../navigation/types'
 
 interface Props extends SettingsStackProps {}
 

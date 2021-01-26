@@ -1,6 +1,6 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
-type StorageKey = "appearanceSettings"
+type StorageKey = 'appearanceSettings'
 
 class Storage {
   async getItem(key: StorageKey) {
@@ -8,7 +8,7 @@ class Storage {
   }
 
   async setItem(key: StorageKey, value: string) {
-   await AsyncStorage.setItem(key, value)
+    await AsyncStorage.setItem(key, value)
   }
 }
 

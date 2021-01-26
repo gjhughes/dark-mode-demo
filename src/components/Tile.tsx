@@ -1,7 +1,7 @@
-import React from "react"
-import {View, ViewProps, StyleSheet} from "react-native"
+import React from 'react'
+import {View, ViewProps, StyleSheet} from 'react-native'
 
-import {useTheme} from "../hooks"
+import {useTheme} from '../hooks'
 
 interface Props extends ViewProps {
   children: React.ReactElement
@@ -10,7 +10,12 @@ interface Props extends ViewProps {
 export default function Tile({children, style}: Props) {
   const {colors} = useTheme()
   return (
-    <View style={[{backgroundColor: colors.secondaryBackground}, styles.container, style]}>
+    <View
+      style={[
+        {backgroundColor: colors.secondaryBackground},
+        styles.container,
+        style
+      ]}>
       {children}
     </View>
   )

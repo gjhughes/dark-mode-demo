@@ -1,8 +1,8 @@
-import React from "react"
-import {View, StyleSheet} from "react-native"
+import React from 'react'
+import {View, StyleSheet} from 'react-native'
 
-import {Text} from "../components"
-import {HomeStackProps} from "../navigation/types"
+import {Text} from '../components'
+import {HomeStackProps} from '../navigation/types'
 
 interface Props extends HomeStackProps {}
 
@@ -17,7 +17,7 @@ export default function Home(_props: Props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import RootNavigator from "./navigation"
-import {AppearanceSettingsProvider} from "./context"
+import RootNavigator from './navigation'
+import {AppearanceSettingsProvider} from './context'
 
 export default function App() {
   return (

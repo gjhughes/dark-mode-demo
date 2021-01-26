@@ -1,7 +1,7 @@
-import React from "react"
-import {Text as RNText, TextProps} from "react-native"
+import React from 'react'
+import {Text as RNText, TextProps} from 'react-native'
 
-import {useTheme} from "../hooks"
+import {useTheme} from '../hooks'
 
 interface Props extends TextProps {
   children: string

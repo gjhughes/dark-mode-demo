@@ -1,11 +1,11 @@
-import React from "react"
-import {View, StyleSheet, ActivityIndicator} from "react-native"
+import React from 'react'
+import {View, StyleSheet, ActivityIndicator} from 'react-native'
 
-import ThemeSelectListItem from "./ThemeSelectListItem"
-import {useTheme, useAppearanceSettings} from "../../hooks"
-import {Appearance} from "../../context"
+import ThemeSelectListItem from './ThemeSelectListItem'
+import {useTheme, useAppearanceSettings} from '../../hooks'
+import {Appearance} from '../../context'
 
-import Text from "../Text"
+import Text from '../Text'
 
 const options: Appearance[] = ['light', 'dark', 'system']
 
@@ -15,15 +15,21 @@ export default function ThemeSelect() {
   return (
     <View>
       <Text>Appearance</Text>
-      <View style={[{backgroundColor: colors.secondaryBackground}, styles.container]}>
+      <View
+        style={[
+          {backgroundColor: colors.secondaryBackground},
+          styles.container
+        ]}>
         {options.map((option) => {
           return (
             <ThemeSelectListItem
               key={option}
               item={option}
               isActive={option === appearance}
-              onPress={setAppearance} />
-          )})}
+              onPress={setAppearance}
+            />
+          )
+        })}
       </View>
     </View>
   )
@@ -34,8 +40,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 16,
-    flexDirection: "row",
+    flexDirection: 'row',
     marginTop: 16,
-    justifyContent: "space-around"
+    justifyContent: 'space-around'
   }
 })

@@ -1,11 +1,18 @@
-import React, {useMemo, useState, useContext, createContext, useEffect, Dispatch, SetStateAction} from "react"
+import React, {
+  useMemo,
+  useState,
+  createContext,
+  useEffect,
+  Dispatch,
+  SetStateAction
+} from 'react'
 
-import Storage from "../utils/Storage"
+import Storage from '../utils/Storage'
 
-export type Appearance = "light" | "dark" | "system"
+export type Appearance = 'light' | 'dark' | 'system'
 
 interface AppearanceContext {
-  appearance: Appearance,
+  appearance: Appearance
   setAppearance: Dispatch<SetStateAction<Appearance>>
 }
 
@@ -25,10 +32,10 @@ export default function AppearanceSettingsProvider({children}: Props) {
   useEffect(() => {
     async function getSettingsFromLocalStorage() {
       try {
-        const value = await Storage.getItem("appearanceSettings")
-        setAppearance(value || "system")
+        const value = await Storage.getItem('appearanceSettings')
+        setAppearance(value || 'system')
       } catch (e) {
-        setAppearance("system")
+        setAppearance('system')
       }
     }
     getSettingsFromLocalStorage()

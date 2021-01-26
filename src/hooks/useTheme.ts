@@ -1,12 +1,12 @@
-import {DefaultTheme, DarkTheme} from "@react-navigation/native"
+import {DefaultTheme, DarkTheme} from '@react-navigation/native'
 
-import useColorScheme from "./useColorScheme"
-import useAppearanceSettings from "./useAppearanceSettings"
-import {DARK_THEME, LIGHT_THEME} from "../theme"
+import useColorScheme from './useColorScheme'
+import useAppearanceSettings from './useAppearanceSettings'
+import {DARK_THEME, LIGHT_THEME} from '../theme'
 
 enum BarStyle {
-  Light = "light-content",
-  Dark = "dark-content"
+  Light = 'light-content',
+  Dark = 'dark-content'
 }
 
 const dark = {
@@ -25,9 +25,9 @@ export default function useTheme() {
   let theme = useColorScheme()
   const {appearance} = useAppearanceSettings()
 
-  if (appearance !== "system") {
+  if (appearance !== 'system') {
     theme = appearance
   }
 
-  return theme === "dark" ? dark : light
+  return theme === 'dark' ? dark : light
 }
