@@ -4,7 +4,7 @@ import {View, ViewProps, StyleSheet} from 'react-native'
 import {useTheme} from '../hooks'
 
 interface Props extends ViewProps {
-  children: React.ReactElement
+  children?: React.ReactElement
 }
 
 export default function Tile({children, style}: Props) {
@@ -24,6 +24,7 @@ export default function Tile({children, style}: Props) {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 8,
-    padding: 16
+    padding: 16,
+    height: 200
   }
 })
