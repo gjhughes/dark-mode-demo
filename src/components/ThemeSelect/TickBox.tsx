@@ -11,7 +11,7 @@ interface Props {
 export default function TickBox({isActive}: Props) {
   const {colors} = useTheme()
   const name = isActive ? 'check-circle' : 'circle'
-  const color = isActive ? colors.secondaryAccent : colors.primaryGray
+  const color = isActive ? colors.accent : colors.primaryGray
   return (
     <View>
       <Feather name={name} color={color} size={24} />
