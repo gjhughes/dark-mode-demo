@@ -6,7 +6,7 @@
 
 ## AppearanceSettingsProvider
 
-```ts
+```tsx
 type Appearance = 'light' | 'dark' | 'system'
 
 interface AppearanceContext {
@@ -47,7 +47,7 @@ function AppearanceSettingsProvider({children}: Props) {
 
 ## useTheme
 
-```ts
+```tsx
 const dark = {
   colors: DARK_THEME,
   navigationTheme: DarkTheme,
