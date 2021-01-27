@@ -17,9 +17,9 @@ function AppearanceSettingsProvider({children}: Props) {
   useEffect(() => {
     async function getSettingsFromLocalStorage() {
       try {
-        const value = await Storage.getItem('appearanceSettings')
-        setAppearance(value || 'system')
-      } catch (e) {
+        const storedSettings = await Storage.getItem('appearanceSettings')
+        setAppearance(storedSettings || 'system')
+      } catch {
         setAppearance('system')
       }
     }
