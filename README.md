@@ -1,5 +1,11 @@
 # dark-mode-demo
 
+## Example app
+
+Run on Expo Go app
+
+![qr](./assets/expo-qr.png)
+
 | Light / System               | Dark                        |
 | ---------------------------- | --------------------------- |
 | ![light](./assets/light.png) | ![light](./assets/dark.png) |
