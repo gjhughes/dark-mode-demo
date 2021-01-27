@@ -6,10 +6,6 @@ Run on Expo Go app
 
 ![qr](./assets/expo-qr.png)
 
-| Light / System               | Dark                        |
-| ---------------------------- | --------------------------- |
-| ![light](./assets/light.png) | ![light](./assets/dark.png) |
-
 ## AppearanceSettingsProvider
 
 ```tsx
@@ -96,3 +92,7 @@ function Navigator() {
   )
 }
 ```
+
+| Light / System               | Dark                        |
+| ---------------------------- | --------------------------- |
+| ![light](./assets/light.png) | ![light](./assets/dark.png) |
