@@ -31,11 +31,9 @@ export default function AppearanceSettingsProvider({children}: Props) {
 
   useEffect(() => {
     async function getSettingsFromLocalStorage() {
-      try {
-        const storedSettings = await Storage.getItem('appearanceSettings')
-        setAppearance(storedSettings || 'system')
-      } catch {
-        setAppearance('system')
+      const storedSettings = await Storage.getItem('appearanceSettings')
+      if (storedSettings != null) {
+        setAppearance(storedSettings)
       }
     }
     getSettingsFromLocalStorage()
