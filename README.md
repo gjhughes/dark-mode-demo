@@ -6,7 +6,16 @@
 
 ## AppearanceSettingsProvider
 
-```js
+```ts
+type Appearance = 'light' | 'dark' | 'system'
+
+interface AppearanceContext {
+  appearance: Appearance
+  setAppearance: Dispatch<SetStateAction<Appearance>>
+}
+
+const AppearanceSettings = createContext({} as AppearanceContext)
+
 function AppearanceSettingsProvider({children}: Props) {
   const [appearance, setAppearance] = useState('system')
 
@@ -38,15 +47,17 @@ function AppearanceSettingsProvider({children}: Props) {
 
 ## useTheme
 
-```js
+```ts
 const dark = {
   colors: DARK_THEME,
-  ...
+  navigationTheme: DarkTheme,
+  barStyle: BarStyle.Light
 }
 
 const light = {
   colors: LIGHT_THEME,
-  ...
+  navigationTheme: DefaultTheme,
+  barStyle: BarStyle.Dark
 }
 
 function useTheme() {
@@ -60,13 +71,22 @@ function useTheme() {
   return theme === 'dark' ? dark : light
 }
 
-// usage
 function Text({children, style, ...props}: Props) {
   const {colors} = useTheme()
   return (
     <RNText style={[{color: colors.label}, style]} {...props}>
       {children}
     </RNText>
+  )
+}
+
+function Navigator() {
+  const {navigationTheme, barStyle} = useTheme()
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <Tabs />
+      <StatusBar barStyle={barStyle} />
+    </NavigationContainer>
   )
 }
 ```
