@@ -10,7 +10,10 @@ export default function Navigator() {
   return (
     <NavigationContainer theme={navigationTheme}>
       <Tabs />
-      <StatusBar barStyle={barStyle} />
+      <StatusBar
+        barStyle={barStyle}
+        backgroundColor={navigationTheme.colors.card}
+      />
     </NavigationContainer>
   )
 }
