@@ -38,8 +38,7 @@ export default function ThemeSelect() {
 const styles = StyleSheet.create({
   container: {
     borderRadius: 8,
-    paddingHorizontal: 16,
-    paddingVertical: 16,
+    paddingVertical: 24,
     flexDirection: 'row',
     marginTop: 16,
     justifyContent: 'space-around'
